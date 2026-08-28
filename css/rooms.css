@@ -227,9 +227,7 @@ nav a {
 
 
 footer {
-   
     width: 100%;
-    
     background-color: var(--primary);
     color: var(--text-2);
     height: 70px;
