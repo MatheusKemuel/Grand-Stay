@@ -95,6 +95,7 @@ nav a {
 
 main {
     padding: 0 10px;
+    flex: 1;
 }
 
 /* BOTÃO */
@@ -108,6 +109,7 @@ main {
     font-size: larger;
     border-radius: 10px;
     transition: .3s;
+    text-align: center;
 
     &:hover {
         background-color: var(--primary);
@@ -121,36 +123,60 @@ main {
 
 /* BOTÃO */
 
+.back-btn {
+    display: flex;
+    align-items: center;
+    color: var(--secondary);
+    text-decoration: none;
+    margin-top: 10px;
+}
 
 
+.hero figure img {
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 10px;
+}
 
+.img-grid figure {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+}
 
+.img-grid figure img {
+    margin: 0 auto;
 
+}
 
+.room-info {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 5px;
+}
 
+.room-info h1 {
+    font-size: 60px;
+}
 
+.room-info h5 {
+    font-weight: 400;
+    font-size: 25px;
+}
 
+.details-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.details-item {
+    display: flex;
+    gap: 15px;
+}
 
 
 
@@ -173,5 +199,92 @@ footer p {
     font-weight: 200;
     font-size: 10px;
 }
+
 /* FOOTER */
 
+
+@media (min-width: 768px) {
+    .img-grid figure {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .img-grid figure img {
+        width: 100%;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    header {
+        background-color: var(--primary);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        position: relative;
+    }
+
+    .btn {
+        margin-top: 0px;
+        font-size: 30px;
+    }
+
+
+
+    .menu-icon {
+        display: none;
+    }
+
+    nav {
+        position: static;
+        width: auto;
+        max-height: none;
+        overflow: visible;
+        background-color: transparent;
+    }
+
+    nav ul {
+        flex-direction: row;
+        align-items: center;
+        gap: 35px;
+        padding: 0;
+    }
+
+    .nav-itens {
+        /* background-color: red; */
+        max-width: 900px;
+    }
+
+    .logo {
+        /* background-color: red; */
+        max-width: 300px;
+    }
+
+    .wrapper {
+        display: flex;
+        gap: 20px
+    }
+
+    .room-info {
+        width: 50%;
+    }
+
+    .imgs {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .room-info {
+        height: 100%;
+        gap: 50px;
+    }
+    .wrapper {
+        height: 100vh;
+        max-width: 1700px;
+        margin: 0 auto;
+    }
+    .imgs{
+        max-width: 800px;
+    }
+}
