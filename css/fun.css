@@ -24,7 +24,6 @@ html {
 body {
     background-color: var(--background);
     min-height: 100vh;
-
     display: flex;
     flex-direction: column;
 }
@@ -94,7 +93,9 @@ nav a {
 
 /* HEADER */
 
-
+main {
+    flex: 1;
+}
 
 /* BOTÃO */
 
@@ -107,6 +108,7 @@ nav a {
     font-size: larger;
     border-radius: 10px;
     transition: .3s;
+    text-align: center;
 
     &:hover {
         background-color: var(--primary);
@@ -120,112 +122,120 @@ nav a {
 
 /* BOTÃO */
 
-.rooms {
-    padding: 0 20px 20px 20px;
-    flex: 1;
+
+figure img {
+    width: 100%;
 }
 
-.rooms-top {
+.section-info {
+    padding: 0 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.section-info article {
+    text-align: start;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    text-align: center;
-    padding: 30px 0;
-    color: var(--text);
+    padding: 10px;
 }
 
-.rooms-bot {
-
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 20px;
-}
-
-.room-card {
-    position: relative;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding-bottom: 20px;
-    max-width: 390px;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-.room-card a {
-    text-decoration: none;
-}
-
-.room-card h5 {
-    font-size: 30px;
-    font-weight: 400;
-}
-
-.room-card figure img {
-    width: 100%;
-}
-
-.card-info {
-    padding: 0 20px;
-}
-
-.card-info p span {
-    color: var(--accent);
-}
-
-.card-info-icon {
+.item-wrapper {
     display: flex;
-    gap: 30px;
-}
-
-.card-info-icon-1 {
-    display: flex;
+    gap: 10px;
     align-items: center;
-    gap: 5px;
-}
-
-.card-info-icon-1 img {
-    width: 30px;
-}
-
-/* CARD OVERLAY */
-
-.dark-overlay {
-    position: absolute;
-    inset: 0;
-    background-color: var(--secondary);
-    border-radius: 10px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    text-align: center;
-}
-
-.dark-overlay a {
-    width: 100%;
-    /* height: 100%; */
-    color: var(--text-2);
-
-}
-
-.dark-overlay a h3 {
-    width: 100%;
-    /* height: 100%; */
-    color: var(--text-2);
-    position: absolute;
-    font-size: 40px;
-    top: 40%;
-}
-
-.room-card:hover .dark-overlay {
-    opacity: .8;
-}
-/* .room-card:hover .card-info {
-    display: none;
-} */
-.room-card:hover .card-img{
-    width: 100%;
 }
 
 
+@media (min-width: 768px) {
+    .section-info article {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    .wrapper {
+        display: flex;
+    }
+    .section-img {
+        height: 100vh;
+        max-width: 1100px;
+    }
+    .section-img figure {
+        height: 100%;
+    }
+    .section-img figure img{
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .section-info {
+        margin-top:150px;
+    }
+    .section-info article {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+}
+
+@media (min-width: 1700px) {
+    .section-info{
+        gap: 50px;
+    }
+     .section-info h1 {
+        font-size: 45px;
+        font-weight: 500;
+     }
+
+     .section-info p {
+        font-size: 26px;
+     }
+
+      .section-info article {
+       margin: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER */
 footer {
     width: 100%;
     background-color: var(--primary);
@@ -241,11 +251,14 @@ footer p {
     font-size: 10px;
 }
 
+/* FOOTER */
 
 
 
 
-/* RESPONSIVIDADE */
+
+
+
 
 @media (min-width: 1024px) {
     header {
@@ -262,7 +275,7 @@ footer p {
         font-size: 30px;
     }
 
-   
+
 
     .menu-icon {
         display: none;
@@ -292,27 +305,4 @@ footer p {
         /* background-color: red; */
         max-width: 300px;
     }
-
-    .rooms-bot {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-}
-
-
-
-@media (min-width: 1200px) {
-    nav ul {
-        gap: 60px;
-    }
-
-    .rooms-bot {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-        max-width: 1500px;
-        margin: 0 auto;
-    }
-
 }

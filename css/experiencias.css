@@ -24,7 +24,6 @@ html {
 body {
     background-color: var(--background);
     min-height: 100vh;
-
     display: flex;
     flex-direction: column;
 }
@@ -94,7 +93,9 @@ nav a {
 
 /* HEADER */
 
-
+main {
+    flex: 1;
+}
 
 /* BOTÃO */
 
@@ -107,6 +108,10 @@ nav a {
     font-size: larger;
     border-radius: 10px;
     transition: .3s;
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
 
     &:hover {
         background-color: var(--primary);
@@ -120,112 +125,60 @@ nav a {
 
 /* BOTÃO */
 
-.rooms {
-    padding: 0 20px 20px 20px;
-    flex: 1;
-}
-
-.rooms-top {
+.experiencias-texts {
+    text-align: center;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    text-align: center;
-    padding: 30px 0;
-    color: var(--text);
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
-.rooms-bot {
+.experiencias-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+.cards-wrapper {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 20px;
+    gap: 30px;
+    margin-bottom: 30px;
+
 }
 
-.room-card {
-    position: relative;
+.card {
+    width: 100%;
     border: 1px solid var(--border);
     border-radius: 10px;
-    padding-bottom: 20px;
-    max-width: 390px;
     margin: 0 auto;
-    overflow: hidden;
 }
 
-.room-card a {
-    text-decoration: none;
-}
-
-.room-card h5 {
-    font-size: 30px;
-    font-weight: 400;
-}
-
-.room-card figure img {
+.card-top img {
     width: 100%;
 }
 
-.card-info {
-    padding: 0 20px;
-}
-
-.card-info p span {
-    color: var(--accent);
-}
-
-.card-info-icon {
+.card-bot {
     display: flex;
-    gap: 30px;
+    flex-direction: column;
+    padding: 20px 10px 10px 10px;
 }
 
-.card-info-icon-1 {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+.card-bot h5 {
+    font-size: 25px;
+    font-weight: 500;
 }
 
-.card-info-icon-1 img {
-    width: 30px;
-}
-
-/* CARD OVERLAY */
-
-.dark-overlay {
-    position: absolute;
-    inset: 0;
-    background-color: var(--secondary);
-    border-radius: 10px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    text-align: center;
-}
-
-.dark-overlay a {
-    width: 100%;
-    /* height: 100%; */
-    color: var(--text-2);
-
-}
-
-.dark-overlay a h3 {
-    width: 100%;
-    /* height: 100%; */
-    color: var(--text-2);
-    position: absolute;
-    font-size: 40px;
-    top: 40%;
-}
-
-.room-card:hover .dark-overlay {
-    opacity: .8;
-}
-/* .room-card:hover .card-info {
+.btn-top {
     display: none;
-} */
-.room-card:hover .card-img{
-    width: 100%;
 }
 
 
+
+
+/* FOOTER */
 footer {
     width: 100%;
     background-color: var(--primary);
@@ -241,11 +194,20 @@ footer p {
     font-size: 10px;
 }
 
+/* FOOTER */
 
 
+@media (min-width: 768px) {
+    .experiencias-texts h1 {
+        font-size: 50px;
+    }
+
+    .experiencias-texts p {
+        font-size: 24px;
+    }
+}
 
 
-/* RESPONSIVIDADE */
 
 @media (min-width: 1024px) {
     header {
@@ -262,7 +224,13 @@ footer p {
         font-size: 30px;
     }
 
-   
+    .btn-top {
+        display: block;
+    }
+
+    .btn-bot {
+        display: none;
+    }
 
     .menu-icon {
         display: none;
@@ -293,26 +261,39 @@ footer p {
         max-width: 300px;
     }
 
-    .rooms-bot {
-        display: grid;
+    .cards-wrapper {
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+        height: 100%;
     }
+
+    .experiencias-wrapper {
+        padding: 50px 20px;
+        gap: 20px;
+        justify-content: flex-start;
+    }
+
+    .experiencias-texts {
+        margin-top: 0px;
+        margin-bottom: 0px;
+
+    }
+
+
 }
 
 
-
 @media (min-width: 1200px) {
-    nav ul {
-        gap: 60px;
+    .experiencias-texts {
+        text-align: left;
+        display: flex;
+        gap: 100px;
     }
 
-    .rooms-bot {
-        display: grid;
+    .cards-wrapper {
         grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-        max-width: 1500px;
-        margin: 0 auto;
     }
 
+    .experiencias-wrapper {
+        flex-direction: row;
+    }
 }
