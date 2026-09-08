@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../assets/icon.png">
+    <link rel="stylesheet" href="../css/reservation.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header>
+        <section class="logo">
+            <a href="../index.html">
+                <img src="../assets/logo-1 1.png" alt="">
+            </a>
+        </section>
+        <section class="nav-itens">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-menu-icon lucide-menu">
+                    <path d="M4 5h16" />
+                    <path d="M4 12h16" />
+                    <path d="M4 19h16" />
+                </svg>
+            </label>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./rooms.html">Quartos</a></li>
+                    <li><a href="./structure.html">Estrutura</a></li>
+                    <li><a href="./experiencias.html">Experiências</a></li>
+                    <li><a href="./restaurant.html">Restaurante</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+
+    <main>
+        <section class="section-form">
+            <form action="">
+                <fieldset class="reservation-form">
+                    <h1>Sua Reserva</h1>
+                    <div class="reservation-inputs">
+                        <div class="input-container">
+                            <label for="check-in">Check-in</label>
+                            <input type="date" id="check-in" required>
+                        </div>
+                        <div class="input-container">
+                            <label for="check-out">Check-out</label>
+                            <input type="date" id="check-out" required>
+                        </div>
+                        <div class="input-container">
+                            <label for="guests">Hóspedes</label>
+                            <input type="number" id="guests" min="1" max="10" placeholder="2 adultos">
+                            <img src="../assets/icons/tabler-icon-chevron-compact-down.svg" alt="">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <hr>
+
+                <fieldset class="personal-info">
+                    <h2>Seus Dados</h2>
+                    <div class="reservation-inputs ri-div">
+                        <div class="input-container">
+                            <label for="name">Nome completo</label>
+                            <input type="text" id="name" placeholder="Digite seu nome" required>
+                        </div>
+                        <div class="ri-div-bot">
+                            <div class="input-container">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" placeholder="Digite seu e-mail" required>
+                            </div>
+                            <div class="input-container">
+                                <label for="phone">Telefone</label>
+                                <input type="tel" id="phone" placeholder="(00) 00000-0000" required>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <a href="" class="btn left-btn">Finalizar Reserva</a>
+            </form>
+        </section>
+
+        <section class="reservation-summary-container">
+            <article class="reservation-summary">
+                <h2>Resumo da Reserva</h2>
+                <div class="top">
+                    <figure>
+                        <img src="../assets/suite-luxo.png" alt="">
+                    </figure>
+                    <div>
+                        <p><strong>Suíte Luxo</strong></p>
+                        <p>R$ 1.250 / noite</p>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="mid">
+                    <dl>
+                        <dt>Check-in:</dt>
+                        <dd>20/05/2027</dd>
+                    </dl>
+                    <dl>
+
+                        <dt>Check-out:</dt>
+                        <dd>22/05/2027</dd>
+                    </dl>
+                    <dl>
+                        <dt>Hóspedes:</dt>
+                        <dd>2 adultos</dd>
+                    </dl>
+                </div>
+
+                <hr>
+
+                <div class="bot">
+                    <h3>Total:</h3>
+                    <p>R$ 2.500</p>
+                    <p>*Em até 10x sem juros</p>
+                </div>
+            </article>
+            <a href="" class="btn right-btn">Finalizar Reserva</a>
+        </section>
+    </main>
+
+
+    <footer>
+        <p>&copy;2026 Copyright: GrandStay</p>
+    </footer>
+
+</body>
+
+</html>
