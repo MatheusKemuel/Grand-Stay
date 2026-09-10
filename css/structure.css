@@ -174,7 +174,12 @@ footer p {
 
 /* FOOTER */
 
-
+@media (min-width: 768px) {
+    .structure-img figure img {
+        height: 400px;
+        object-fit: cover;
+    }
+}
 
 
 @media (min-width: 1024px) {
